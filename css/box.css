@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+.heading_2{
+    width: 100%;
+    border-bottom: orangered solid 0.5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: orangered;
+    font-size: 18px;
+}
+
+tr{
+    width: 100%;
+}
+tr:nth-child(2n-1){
+    background-color: rgb(226, 226, 226);
+}
+tr:nth-child(2n){
+    background-color: rgb(236, 236, 236);
+}
+th{
+    font-size: 12px;
+    background-color: rgb(137, 243, 208);
+}
+td{
+    padding: 5px 0;
+}
+@media screen and (max-width: 639px){
+    th{
+        font-size: 9px;
+    }
+    td{
+        font-size: 10px;
+    }
+}
+
+.starting_line{
+    width: 100%;
+}
+@media screen and (min-width: 640px){
+    .starting_line{
+        width: 49%;
+        float: left;
+    }
+    .starting_line:last-child{
+        float: right;
+    }
+}
+
+.line_up{
+    width: 49%;
+    float: left;
+}
+.line_up:first-child{
+    float: left;
+}
+.line_up:last-child{
+    float: right;
+}
+.line_up .team{
+    width: 100%;
+    text-align: center;
+}
+@media screen and (min-width: 640px){
+    .line_up .team,
+    .line_up h3{
+        width: 60%;
+        float: right;
+    }
+    .line_up:first-child .team,
+    .line_up:first-child h3{
+        float: right;
+    }
+    .line_up:last-child .team,
+    .line_up:last-child h3{
+        float: left;
+    }
+}
+.team th:first-child,
+.team th:last-child,
+.team td:first-child,
+.team td:last-child{
+    width: 20%;
+}
+.date{
+    width: 100%;
+    text-align: center;
+    color: rgb(92, 55, 226);
+    font-size: 22px;
+}
+
+.score{
+    width: 100%;
+    text-align: center;
+}
+.score td{
+    padding: 3px 0;
+}
+.score th:first-child,
+.score td:first-child{
+    width: 20%;
+}
+.score th:not(:first-child),
+.score td:not(:first-child){
+    width: 10%;
+}
+
+.order{
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.order td{
+    padding: 3px 0;
+}
+.order th:first-child,
+.order td:first-child{
+    width: 16%;
+}
+.order th:not(:first-child),
+.order td:not(:first-child){
+    width: 7%;
+}
+
+.pitcher{
+    width: 100%;
+    text-align: center;
+}
+.pitcher td{
+    padding: 3px 0;
+}
+.pitcher th:first-child,
+.pitcher td:first-child{
+    width: 12%;
+}
+.pitcher th:not(:first-child),
+.pitcher td:not(:first-child){
+    width: 8%;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>政大棒球聯盟 NCBA - 戰績數據</title>
+
+    <script language="JavaScript">
+        function month() {
+            var today = new Date();
+            var mon = "";
+
+            switch (today.getMonth() + 1) {
+                case 1:
+                    mon += "Jan";
+                    break;
+                case 2:
+                    mon += "Feb";
+                    break;
+                case 3:
+                    mon += "Mar";
+                    break;
+                case 4:
+                    mon += "Apr";
+                    break;
+                case 5:
+                    mon += "May";
+                    break;
+                case 6:
+                    mon += "Jun";
+                    break;
+                case 7:
+                    mon += "Jul";
+                    break;
+                case 8:
+                    mon += "Aug";
+                    break;
+                case 9:
+                    mon += "Sep";
+                    break;
+                case 10:
+                    mon += "Oct";
+                    break;
+                case 11:
+                    mon += "Nov";
+                    break;
+                case 12:
+                    mon += "Dec";
+                    break;
+            }
+
+            document.write("<a href=\"../schedule/" + mon + ".html\">賽程</a>");
+        }
+
+        function team(RANK, TEAM, G, W, L, T, GB) {
+            var PCT;
+
+            if ((G - T) == 0) {
+                PCT = "--";
+            }
+            else {
+                var p = W / (G - T);
+                PCT = p.toFixed(3);
+            }
+
+            document.write("<tr>");
+            document.write("<td>" + RANK + "</td>");
+            document.write("<td>" + TEAM + "</td>");
+            document.write("<td>" + G + "</td>");
+            document.write("<td>" + W + "</td>");
+            document.write("<td>" + L + "</td>");
+            document.write("<td>" + T + "</td>");
+            document.write("<td>" + PCT + "</td>");
+            document.write("<td>" + GB + "</td>");
+            document.write("</tr>");
+        }
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="../css/base.css" rel="stylesheet" media="all">
+    <link href="../css/standing.css" rel="stylesheet" media="all">
+
+    <!--[if It IE]>
+        <script src="/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index">
+    <header id="header">
+        <div class="inner">
+            <h1 id="logo">
+                <a href="../index.html">
+                    <img src="../img/logo.jpg" width="164" height="53" alt="NCBA">
+                </a>
+            </h1>
+
+            <p id="title">政大棒球聯盟 NCBA</p>
+        </div>
+    </header>
+
+    <nav id="gnav">
+        <ul class="inner">
+            <li>
+                <a href="../gnav/org.html">聯盟組織</a>
+            </li>
+            <li>
+                <a href="../gnav/news.html">最新消息</a>
+            </li>
+            <li>
+                <script language="JavaScript">
+                    month();
+                </script>
+            </li>
+            <li class="selected">
+                <a href="../gnav/standing.html">戰績數據</a>
+            </li>
+            <li>
+                <a href="../gnav/top5.html">排行榜</a>
+            </li>
+            <li>
+                <a href="../gnav/teams.html">球隊</a>
+            </li>
+            <li>
+                <a href="../gnav/photo.html">比賽相簿</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="contents" class="inner">
+        <main id="main">
+            <fieldset class="field">
+                <legend class="fieldset_title">球隊分組排名RANKING</legend>
+
+                <ul>
+                    <li class="group">
+                        <h3 class="heading_2">Group A</h3>
+
+                        <table class="ranking">
+                            <tr>
+                                <th>RANKING</th>
+                                <th>TEAM</th>
+                                <th>G</th>
+                                <th>W</th>
+                                <th>L</th>
+                                <th>T</th>
+                                <th>PCT</th>
+                                <th>GB</th>
+                            </tr>
+                            <script language="JavaScript">
+                                /*
+                                team(RANK, TEAM, G, W, L, T, GB);
+                                */
+                                team(1, "", 0, 0, 0, 0, "--");
+                                team(2, "", 0, 0, 0, 0, "--");
+                                team(3, "", 0, 0, 0, 0, "--");
+                                team(4, "", 0, 0, 0, 0, "--");
+                                team(5, "", 0, 0, 0, 0, "--");
+                            </script>
+                        </table>
+                    </li>
+                    <li class="group">
+                        <h3 class="heading_2">Group B</h3>
+
+                        <table class="ranking">
+                            <tr>
+                                <th>RANKING</th>
+                                <th>TEAM</th>
+                                <th>G</th>
+                                <th>W</th>
+                                <th>L</th>
+                                <th>T</th>
+                                <th>PCT</th>
+                                <th>GB</th>
+                            </tr>
+                            <script language="JavaScript">
+                                team(1, "", 0, 0, 0, 0, "--");
+                                team(2, "", 0, 0, 0, 0, "--");
+                                team(3, "", 0, 0, 0, 0, "--");
+                                team(4, "", 0, 0, 0, 0, "--");
+                                team(5, "", 0, 0, 0, 0, "--");
+                            </script>
+                        </table>
+                    </li>
+                    <li class="group">
+                        <h3 class="heading_2">Group C</h3>
+
+                        <table class="ranking">
+                            <tr>
+                                <th>RANKING</th>
+                                <th>TEAM</th>
+                                <th>G</th>
+                                <th>W</th>
+                                <th>L</th>
+                                <th>T</th>
+                                <th>PCT</th>
+                                <th>GB</th>
+                            </tr>
+                            <script language="JavaScript">
+                                team(1, "", 0, 0, 0, 0, "--");
+                                team(2, "", 0, 0, 0, 0, "--");
+                                team(3, "", 0, 0, 0, 0, "--");
+                                team(4, "", 0, 0, 0, 0, "--");
+                            </script>
+                        </table>
+                    </li>
+                    <li class="group">
+                        <h3 class="heading_2">Wild Card</h3>
+
+                        <table class="ranking">
+                            <tr>
+                                <th>RANKING</th>
+                                <th>TEAM</th>
+                                <th>G</th>
+                                <th>W</th>
+                                <th>L</th>
+                                <th>T</th>
+                                <th>PCT</th>
+                                <th>GB</th>
+                            </tr>
+                            <script language="JavaScript">
+                                team(1, "", 0, 0, 0, 0, "--");
+                                team(2, "", 0, 0, 0, 0, "--");
+                                team(3, "", 0, 0, 0, 0, "--");
+                                team(4, "", 0, 0, 0, 0, "--");
+                                team(5, "", 0, 0, 0, 0, "--");
+                                team(6, "", 0, 0, 0, 0, "--");
+                                team(7, "", 0, 0, 0, 0, "--");
+                                team(8, "", 0, 0, 0, 0, "--");
+                                team(9, "", 0, 0, 0, 0, "--");
+                                team(10, "", 0, 0, 0, 0, "--");
+                                team(11, "", 0, 0, 0, 0, "--");
+                            </script>
+                        </table>
+                    </li>
+                </ul>
+            </fieldset>
+        </main>
+
+        <div id="manu" class="side">
+            <ul>
+                <li>
+                    <a href="./ranking.html">球隊分組排名</a>
+                </li>
+                <li>
+                    <a href="./pitcher.html">團隊投手數據</a>
+                </li>
+                <li>
+                    <a href="./batter.html">團隊打擊數據</a>
+                </li>
+                <li>
+                    <a href="./defense.html">團隊守備數據</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--p id="page_top"><a href="#header">回到頁面上方</a></p-->
+    </div>
+
+    <footer id="footer">
+        <div class="inner">
+            <ul class="sns">
+                <li>
+                    <a href="https://www.facebook.com/NCCUNCBA" class="icon-facebook2" title="Facebook"></a>
+                </li>
+                <li>
+                    <a href="#" class="icon-instagram" title="Instagram"></a>
+                </li>
+                <li>
+                    <a href="mailto:nccuncba@gmail.com" class="icon-envelope" title="Email"></a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                <small>Copyright &copy; NCBA All Right Reserved.</small>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

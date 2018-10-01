@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+.side{
+    width: 100%;
+    margin-top: 10px;
+    border: dashed 1px;
+    text-align: center;
+}
+.side li{
+    font-size: 12px;
+    padding: 5px 0;
+}
+@media screen and (min-width: 640px){
+    .side{
+        margin-top: 0;
+        padding: 10px;
+        text-align: left;
+    }
+    .side li{
+        margin-left: 15px;
+    }
+}
+
+.heading_2{
+    width: 100%;
+    border-bottom: orangered solid 0.5px;
+    margin-bottom: 10px;
+    color: orangered;
+    font-size: 18px;
+}
+
+.group:not(:first-child){
+    margin-top: 50px;
+}
+
+tr{
+    width: 100%;
+}
+tr:nth-child(2n-1){
+    background-color: rgb(226, 226, 226);
+}
+tr:nth-child(2n){
+    background-color: rgb(236, 236, 236);
+}
+th{
+    font-size: 12px;
+    background-color: rgb(137, 243, 208);
+}
+td{
+    padding: 5px 0;
+}
+@media screen and (max-width: 639px){
+    th{
+        font-size: 9px;
+    }
+    td{
+        font-size: 10px;
+    }
+}
+
+.ranking{
+    width: 90%;
+    margin: 10px 5%;
+    text-align: center;
+}
+.ranking th:not(:first-child):not(:nth-child(2)),
+.ranking td:not(:first-child):not(:nth-child(2)){
+    width: 10%;
+}
+.ranking th:first-child,
+.ranking td:first-child{
+    width: 15%;
+}
+.ranking th:nth-child(2),
+.ranking td:nth-child(2){
+    width: 25%;
+}
+
+.team{
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+.team th:not(:first-child),
+.team td:not(:first-child){
+    width: 6.5%;
+}
+.team th:first-child,
+.team td:first-child{
+    width: 15.5%;
+}
+
+@media screen and (max-width: 639px){
+    .field{
+        font-size: 12px;
+    }
+}

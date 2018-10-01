@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.field img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    text-align: center;
+}
+.field p{
+    padding: 10px 0;
+}
+.field .date{
+    float: right;
+}
+
+.list{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px;
+}
+.list .item{
+    height: 35px;
+}
+.list .item:nth-child(2),
+.list .item:nth-child(3),
+.list .item:nth-child(4),
+.list .item:nth-child(5),
+.list .item:nth-child(6),
+.list .item:nth-child(7),
+.list .item:nth-child(8),
+.list .item:nth-child(9),
+.list .item:nth-child(10),
+.list .item:nth-child(11),
+.list .item:nth-child(12),
+.list .item:nth-child(13),
+.list .item:nth-child(14),
+.list .item:nth-child(15),
+.list .item:nth-child(16),
+.list .item:nth-child(17),
+.list .item:nth-child(18),
+.list .item:nth-child(19),
+.list .item:nth-child(20){
+    border-top: #0083af 0.5px solid;
+}
+.list .topic{
+    width: 90%;
+}
+.list .release{
+    text-align: left;
+    vertical-align: middle;
+}
+@media screen and (max-width: 639px){
+    .list{
+        font-size: 12px;
+    }
+    .list .item{
+        height: 50px;
+    }
+}
+
+.heading_2{
+    padding: 0 10px;
+    border-bottom: #bdf7dc solid 0.5px;
+    color: black;
+    font-size: 20px;
+}
+
+#page{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    text-align: center;
+}
+#page a{
+    text-decoration: underline;
+}
+#page li{
+    display: inline;
+}

@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+/*
+==================================================
+    RESET CSS
+==================================================
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, main, menu, nav, section, summary,
+time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section{
+    display: block;
+}
+
+html{
+    -webkit-text-size-adjust: 100%;
+}
+
+body{
+    color: #59220d;
+    line-height: 1.5;
+    font-size: 14px;
+    font-family: sans-serif, "Microsoft JhengHei";
+}
+
+img{
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol{
+    list-style-type: none;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img, input, select, textarea{
+    vertical-align: middle;
+}
+
+a{
+    color: #59220d;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover{
+    color: #d53e04;
+}
+
+a:hover img{
+    opacity: 0.7;
+}
+
+/* ICON FONTS */
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?ra105s');
+    src: url('fonts/icomoon.eot?ra105s#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?ra105s') format('truetype'),
+        url('fonts/icomoon.woff?ra105s') format('woff'),
+        url('fonts/icomoon.svg?ra105s#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-envelope:before {
+    content: "\e900";
+}
+.icon-facebook2:before {
+    content: "\ea91";
+}
+.icon-instagram:before {
+    content: "\ea92";
+}
+
+/* CLEARFIX */
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix{
+    *zoom: 1;
+}
+
+/*
+==================================================
+    BASE LAYOUT
+==================================================
+*/
+
+/* BASIC DESIGN */
+#index{
+    background-color: #fdf2f2;
+}
+
+.inner{
+    max-width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+}
+.inner:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* HEADER */
+#header{
+    padding: 30px;
+    background: url(../img/bkg.jpg) center top no-repeat;
+    background-size: cover;
+    background-position-y: 70%;
+    /*background-color: #33ccff;*/
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+@media screen and (min-width: 640px){
+    #header{
+        padding: 80px;
+    }
+}
+
+#logo{
+    width: 13%;
+    /*max-width: 50px;*/
+    padding-left: 6%;
+    padding-right: 6%;
+    /*height: auto;*/
+    display: table-cell;
+    vertical-align: middle;
+}
+@media screen and (min-width: 640px){
+    #logo{
+        width: 14%;
+        /*max-width: 50px;*/
+        padding-left: 5.5%;
+        padding-right: 5.5%;
+    }
+}
+
+#title{
+    width: 50%;
+    max-width: 840px;
+    /*padding-right: 25%;*/
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: table-cell;
+    /*text-align: center;*/
+    vertical-align: middle;
+}
+@media screen and (min-width: 640px){
+    #title{
+        font-size: 37px;
+        width: 68%;
+        padding-right: 7%;
+    }
+}
+
+/* GNAV */
+#gnav{
+    background-color: #77ddff;
+}
+#gnav ul{
+    overflow: hidden;
+}
+#gnav li{
+    float: left;
+    width: 14.2857%;
+    text-align: center;
+}
+#gnav a{
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+#gnav a:hover{
+    background-color: #33ccff;
+}
+.selected{
+    display: block;
+    color: #fff;
+    background-color: #33ccff;
+    text-decoration: none;
+    font-size: 12px;
+}
+@media screen and (min-width: 640px){
+    #gnav a{
+        font-size: 18px;
+    }
+    .selected{
+        font-size: 18px;
+    }
+}
+
+#contents{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#manu{
+    width: 100%;
+}
+@media screen and (min-width: 640px){
+    #manu{
+        width: 15%;
+        float: left;
+    }
+}
+#manu p{
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+#main{
+    width: 100%;
+}
+@media screen and (min-width: 640px){
+    #main{
+        width: 80%;
+        float: right;
+    }
+}
+
+#footer{
+    background-color: #33ccff;
+}
+
+.heading{
+    width: 100%;
+    height: 35px;
+    border-bottom: #d53e04 1px solid;
+    color: #d53e04;
+    font-size: 20px;
+}
+
+.sns{
+    font-size: 18px;
+    text-align: center;
+}
+.sns li{
+    display: inline-block;
+    padding: 5px;
+}
+
+.copyright{
+    text-align: center;
+}
+
+/* FIELDSET */
+.field{
+    max-width: 100%;
+    padding: 10px;
+    border: solid 1px;
+}
+@media screen and (min-width: 640px){
+    .field{
+        padding: 20px;
+    }
+}
+
+.fieldset_title{
+    padding: 10px 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+@media screen and (min-width: 640px){
+    .fieldset_title{
+        padding: 10px 20px;
+        font-size: 26px;
+    }
+}
+
+/* MORE */
+.more{
+    margin-top: 5px;
+    padding-right: 20px;
+    text-align: right;
+}
+.more a{
+    color: #d53e04;
+    text-decoration: underline;
+}

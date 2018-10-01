@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>政大棒球聯盟 NCBA - 最新消息</title>
+
+    <script language="JavaScript">
+        function month() {
+            var today = new Date();
+            var mon = "";
+
+            switch (today.getMonth() + 1) {
+                case 1:
+                    mon += "Jan";
+                    break;
+                case 2:
+                    mon += "Feb";
+                    break;
+                case 3:
+                    mon += "Mar";
+                    break;
+                case 4:
+                    mon += "Apr";
+                    break;
+                case 5:
+                    mon += "May";
+                    break;
+                case 6:
+                    mon += "Jun";
+                    break;
+                case 7:
+                    mon += "Jul";
+                    break;
+                case 8:
+                    mon += "Aug";
+                    break;
+                case 9:
+                    mon += "Sep";
+                    break;
+                case 10:
+                    mon += "Oct";
+                    break;
+                case 11:
+                    mon += "Nov";
+                    break;
+                case 12:
+                    mon += "Dec";
+                    break;
+            }
+
+            document.write("<a href=\"../schedule/" + mon + ".html\">賽程</a>");
+        }
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="../css/base.css" rel="stylesheet" media="all">
+    <link href="../css/news.css" rel="stylesheet" media="all">
+
+    <!--[if It IE]>
+        <script src="/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index">
+    <header id="header">
+        <div class="inner">
+            <h1 id="logo">
+                <a href="../index.html">
+                    <img src="../img/logo.jpg" width="164" height="53" alt="NCBA">
+                </a>
+            </h1>
+
+            <p id="title">政大棒球聯盟 NCBA</p>
+        </div>
+    </header>
+
+    <nav id="gnav">
+        <ul class="inner">
+            <li>
+                <a href="../gnav/org.html">聯盟組織</a>
+            </li>
+            <li class="selected">
+                <a href="../gnav/news.html">最新消息</a>
+            </li>
+            <li>
+                <script language="JavaScript">
+                    month();
+                </script>
+            </li>
+            <li>
+                <a href="../gnav/standing.html">戰績數據</a>
+            </li>
+            <li>
+                <a href="../gnav/top5.html">排行榜</a>
+            </li>
+            <li>
+                <a href="../gnav/teams.html">球隊</a>
+            </li>
+            <li>
+                <a href="../gnav/photo.html">比賽相簿</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="contents" class="inner">
+        <main>
+            <fieldset class="field">
+                <legend class="fieldset_title">NEWS</legend>
+
+                <img src="../img/news/2018.10.01.jpg" alt="">
+
+                <!--THE TITLE OF THE NEWS-->
+                <h3 class="heading_2">風管0：11傳院</h3>
+
+                <p>圖/陳筱勻</p>
+
+                <!--CONTENTS-->
+                <p>
+                    政大棒球聯盟的第一場比賽在大晴天正式開打了，讓我們來回顧這一場具有特殊意義的比賽吧！
+                </p>
+
+                <p>
+                    一局上風管先攻，靠著對方投手的觸身球，加上積極的盜壘，風管系在兩出局就攻佔三壘，可是打者不給力，被投手三振，留下三壘殘壘。
+                </p>
+
+                <p>
+                    一局下傳院的攻勢在第一棒不死三振以及投手暴投中展開，風管系的投手緊接著送出兩次保送及一次三振，傳院當然不會放棄這個賺取打點的好時機，靠著兩支安打以及投手暴投，在一局下得到了5分，打下勝利的基礎。
+                </p>
+
+                <p>
+                    二局上一開始，風管系靠著安打及游擊手傳球失誤上到了二壘，看似是個反攻的大好機會，不料跑者卻在二壘被牽制出局，後來的兩棒也逃不過傳院投手的好K功，被三振出局，結束了原本大有可為的二局上半。
+                </p>
+
+                <p>
+                    二局下半，傳院攻勢又起，靠著串聯安打以及積極的跑壘，帶給風管系不小的守備壓力，最後也拿下了6分，為提早結束比賽做好萬全的準備。
+                </p>
+
+                <p>
+                    三局上半，風管系最後的反攻機會，輪到891棒扛下延續攻勢的責任，可是傳院投手不給風管系有苟延殘喘的機會，用KKK，連三K為這場比賽做了個乾脆的結尾。也恭喜傳院旗開得勝，拿下聯盟首勝。
+                </p>
+
+                <!--DATE-->
+                <p class="date">- 2018.10.01 -
+                    <p>
+            </fieldset>
+        </main>
+
+        <!--p id="page_top"><a href="#header">回到頁面上方</a></p-->
+    </div>
+
+    <footer id="footer">
+        <div class="inner">
+            <ul class="sns">
+                <li>
+                    <a href="https://www.facebook.com/NCCUNCBA" class="icon-facebook2" title="Facebook"></a>
+                </li>
+                <li>
+                    <a href="#" class="icon-instagram" title="Instagram"></a>
+                </li>
+                <li>
+                    <a href="mailto:nccuncba@gmail.com" class="icon-envelope" title="Email"></a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                <small>Copyright &copy; NCBA All Right Reserved.</small>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>政大棒球聯盟 NCBA - GAME BOX</title>
+
+    <script language="JavaScript">
+        function month() {
+            var today = new Date();
+            var mon = "";
+
+            switch (today.getMonth() + 1) {
+                case 1:
+                    mon += "Jan";
+                    break;
+                case 2:
+                    mon += "Feb";
+                    break;
+                case 3:
+                    mon += "Mar";
+                    break;
+                case 4:
+                    mon += "Apr";
+                    break;
+                case 5:
+                    mon += "May";
+                    break;
+                case 6:
+                    mon += "Jun";
+                    break;
+                case 7:
+                    mon += "Jul";
+                    break;
+                case 8:
+                    mon += "Aug";
+                    break;
+                case 9:
+                    mon += "Sep";
+                    break;
+                case 10:
+                    mon += "Oct";
+                    break;
+                case 11:
+                    mon += "Nov";
+                    break;
+                case 12:
+                    mon += "Dec";
+                    break;
+            }
+
+            document.write("<a href=\"../schedule/" + mon + ".html\">賽程</a>");
+        }
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="../css/base.css" rel="stylesheet" media="all">
+    <link href="../css/box.css" rel="stylesheet" media="all">
+
+    <!--[if It IE]>
+        <script src="/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index">
+    <header id="header">
+        <div class="inner">
+            <h1 id="logo"><a href="../index.html"><img src="../img/logo.jpg" width="164" height="53" alt="NCBA"></a></h1>
+
+            <p id="title">政大棒球聯盟 NCBA</p>
+        </div>
+    </header>
+
+    <nav id="gnav">
+        <ul class="inner">
+            <li><a href="../gnav/org.html">聯盟組織</a></li>
+            <li><a href="../gnav/news.html">最新消息</a></li>
+            <li>
+                <script language="JavaScript">
+                    month();
+                </script>
+            </li>
+            <li><a href="../gnav/standing.html">戰績數據</a></li>
+            <li><a href="../gnav/top5.html">排行榜</a></li>
+            <li><a href="../gnav/teams.html">球隊</a></li>
+            <li><a href="../gnav/photo.html">比賽相簿</a></li>
+        </ul>
+    </nav>
+
+    <div id="contents" class="inner">
+        <main>
+            <fieldset class="field">
+                <legend class="fieldset_title">GAME BOX</legend>
+
+                <script language="JavaScript">
+                    function score(TEAM, ONE, TWO, THREE, FOUR, FIVE, R, H, E) {
+                        document.write("<tr>");
+                        document.write("<td>" + TEAM + "</td>");
+                        document.write("<td>" + ONE + "</td>");
+                        document.write("<td>" + TWO + "</td>");
+                        document.write("<td>" + THREE + "</td>");
+                        document.write("<td>" + FOUR + "</td>");
+                        document.write("<td>" + FIVE + "</td>");
+                        document.write("<td>" + R + "</td>");
+                        document.write("<td>" + H + "</td>");
+                        document.write("<td>" + E + "</td>");
+                        document.write("</tr>");
+                    }
+
+                    function batter(NAME, POS, AB, H, TWO_BH, THREE_BH, HR, SO, BB, HBP, R, RBI, SB) {
+                        document.write("<tr>");
+                        document.write("<td>" + NAME + "</td>");
+                        document.write("<td>" + POS + "</td>");
+                        document.write("<td>" + AB + "</td>");
+                        document.write("<td>" + H + "</td>");
+                        document.write("<td>" + TWO_BH + "</td>");
+                        document.write("<td>" + THREE_BH + "</td>");
+                        document.write("<td>" + HR + "</td>");
+                        document.write("<td>" + SO + "</td>");
+                        document.write("<td>" + BB + "</td>");
+                        document.write("<td>" + HBP + "</td>");
+                        document.write("<td>" + R + "</td>");
+                        document.write("<td>" + RBI + "</td>");
+                        document.write("<td>" + SB + "</td>");
+                        document.write("</tr>");
+                    }
+
+                    function pitcher(NAME, IN, BF, NP, H, HR, SO, BB, WP, BK, R, ER) {
+                        document.write("<tr>");
+                        document.write("<td>" + NAME + "</td>");
+                        document.write("<td>" + IN + "</td>");
+                        document.write("<td>" + BF + "</td>");
+                        document.write("<td>" + NP + "</td>");
+                        document.write("<td>" + H + "</td>");
+                        document.write("<td>" + HR + "</td>");
+                        document.write("<td>" + SO + "</td>");
+                        document.write("<td>" + BB + "</td>");
+                        document.write("<td>" + WP + "</td>");
+                        document.write("<td>" + BK + "</td>");
+                        document.write("<td>" + R + "</td>");
+                        document.write("<td>" + ER + "</td>");
+                        document.write("</tr>");
+                    }
+                </script>
+
+                <table class="score">
+                    <tr>
+                        <th>TEAM</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>R</th>
+                        <th>H</th>
+                        <th>E</th>
+                    </tr>
+                    <script language="JavaScript">
+                        /*
+                        score("球隊名稱", 1, 2, 3, 4, 5, R, H, E)*/
+                        score("風管", 0, 0, 0, "", "", 0, 1, 3);
+                        score("傳院", 5, 6, "X", "", "", 11, 5, 1);
+                    </script>
+                </table>
+
+                <section>
+                    勝利投手：張玟榕（1W）<br>
+                    敗戰投手：李承駿（1L）<br>
+                    單場MVP：張玟榕
+                </section>
+
+                <section class="starting_line">
+                    <h3 class="heading_2">風管</h3>
+                    <table class="order">
+                        <tr>
+                            <th>NAME</th>
+                            <th>POS</th>
+                            <th>AB</th>
+                            <th>H</th>
+                            <th>2BH</th>
+                            <th>3BH</th>
+                            <th>HR</th>
+                            <th>SO</th>
+                            <th>BB</th>
+                            <th>HBP</th>
+                            <th>R</th>
+                            <th>RBI</th>
+                            <th>SB</th>
+                        </tr>
+                        <script language="JavaScript">
+                            /*
+                            batter("NAME", POS, AB, H, 2BH, 3BH, HR, SO, BB, HBP, R, RBI, SB) */
+                            batter("莊士霆", "CF", 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0);
+                            batter("許富凱", "SS", 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0);
+                            batter("黃柏堯", "LF", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0);
+                            batter("李振儀", "C", 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0);
+                            batter("羅凱翔", "3B", 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                            batter("呂智傑", "2B", 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0);
+                            batter("吳奇軒", "RF", 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0);
+                            batter("張瑋倫", "1B", 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0);
+                            batter("李承駿", "P", 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0);
+                        </script>
+                    </table>
+                    <table class="pitcher">
+                        <tr>
+                            <th>NAME</th>
+                            <th>IN</th>
+                            <th>BF</th>
+                            <th>NP</th>
+                            <th>H</th>
+                            <th>HR</th>
+                            <th>SO</th>
+                            <th>BB</th>
+                            <th>WP</th>
+                            <th>BK</th>
+                            <th>R</th>
+                            <th>ER</th>
+                        </tr>
+                        <script language="JavaScript">
+                            /*
+                            pitcher("姓名", IN, BF, NP, H, HR, SO, BB, WP, BK, R, ER)*/
+                            pitcher("李承駿", 2, 17, 67, 5, 0, 6, 2, 1, 8, 11, 10);
+                        </script>
+                    </table>
+                </section>
+
+                <section class="starting_line">
+                    <h3 class="heading_2">傳院</h3>
+                    <table class="order">
+                        <tr>
+                            <th>NAME</th>
+                            <th>POS</th>
+                            <th>AB</th>
+                            <th>H</th>
+                            <th>2BH</th>
+                            <th>3BH</th>
+                            <th>HR</th>
+                            <th>SO</th>
+                            <th>BB</th>
+                            <th>HBP</th>
+                            <th>R</th>
+                            <th>RBI</th>
+                            <th>SB</th>
+                        </tr>
+                        <script language="JavaScript">
+                            /*
+                            batter("NAME", POS, AB, H, 2BH, 3BH, HR, SO, BB, HBP, R, RBI, SB) */
+                            batter("陳柏勛", "CF", 2, 1, 0, 0, 0, 1, 0, 0, 2, 0, 1);
+                            batter("許昱博", "C", 1, 1, 1, 0, 0, 0, 1, 0, 2, 1, 1);
+                            batter("陳韋辰", "SS", 2, 0, 0, 0, 0, 1, 0, 0, 1, 0, 2);
+                            batter("施琮仁", "LF", 1, 0, 0, 0, 0, 1, 1, 0, 2, 0, 0);
+                            batter("陳建國", "1B", 2, 2, 1, 0, 0, 0, 0, 0, 2, 1, 3);
+                            batter("秦昌慈", "3B", 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1);
+                            batter("李權洲", "RF", 2, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0);
+                            batter("林庭寬", "2B", 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0);
+                            batter("李昶毅", "DH", 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                        </script>
+                    </table>
+                    <table class="pitcher">
+                        <tr>
+                            <th>NAME</th>
+                            <th>IN</th>
+                            <th>BF</th>
+                            <th>NP</th>
+                            <th>H</th>
+                            <th>HR</th>
+                            <th>SO</th>
+                            <th>BB</th>
+                            <th>WP</th>
+                            <th>BK</th>
+                            <th>R</th>
+                            <th>ER</th>
+                        </tr>
+                        <script language="JavaScript">
+                            /*
+                            pitcher("姓名", IN, BF, NP, H, HR, SO, BB, WP, BK, R, ER)*/
+                            pitcher("張玟榕", 3, 10, 41, 0, 0, 8, 0, 1, 0, 0, 0);
+                        </script>
+                    </table>
+                </section>
+            </fieldset>
+        </main>
+
+        <!--p id="page_top"><a href="#header">回到頁面上方</a></p-->
+    </div>
+
+    <footer id="footer">
+        <div class="inner">
+            <ul class="sns">
+                <li><a href="https://www.facebook.com/NCCUNCBA" class="icon-facebook2" title="Facebook"></a></li>
+                <li><a href="#" class="icon-instagram" title="Instagram"></a></li>
+                <li><a href="mailto:nccuncba@gmail.com" class="icon-envelope" title="Email"></a></li>
+            </ul>
+
+            <p class="copyright"><small>Copyright &copy; NCBA All Right Reserved.</small></p>
+        </div>
+    </footer>
+</body>
+
+</html>

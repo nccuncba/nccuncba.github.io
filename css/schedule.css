@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.side{
+    width: 100%;
+    margin-top: 10px;
+    border: dashed 1px;
+    text-align: center;
+}
+.side li{
+    font-size: 12px;
+    padding: 5px 0;
+}
+@media screen and (min-width: 640px){
+    .side{
+        margin-top: 0;
+        padding: 10px;
+        text-align: left;
+    }
+    .side li{
+        margin-left: 15px;
+    }
+}
+
+.field{
+    text-align: center;
+}
+.field .fieldset_title{
+    text-align: left;
+}
+
+.month{
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: orangered;
+    border-bottom: #33ddcc 0.5px solid;
+}
+
+.day{
+    width: 90%;
+    margin: 0 5%;
+}
+.day tr:not(:first-child):not(:last-child){
+    border-bottom: #77ddff 0.5px solid;
+}
+.day tr{
+    width: 100%;
+}
+.day th,
+.day td{
+    width: 14.2857%;
+}
+.day td{
+    height: 91.5px;
+    vertical-align: text-top;
+    text-align: left;
+}
+.day td:not(:last-child){
+    border-right: #77ddff 0.5px solid;
+}
+.day .dd{
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+td .game{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.today{
+    background-color: rgb(214, 216, 215);
+}

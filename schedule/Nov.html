@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>政大棒球聯盟 NCBA - 賽程</title>
+
+    <script language="JavaScript">
+        function month() {
+            var today = new Date();
+            var mon = "";
+
+            switch (today.getMonth() + 1) {
+                case 1:
+                    mon += "Jan";
+                    break;
+                case 2:
+                    mon += "Feb";
+                    break;
+                case 3:
+                    mon += "Mar";
+                    break;
+                case 4:
+                    mon += "Apr";
+                    break;
+                case 5:
+                    mon += "May";
+                    break;
+                case 6:
+                    mon += "Jun";
+                    break;
+                case 7:
+                    mon += "Jul";
+                    break;
+                case 8:
+                    mon += "Aug";
+                    break;
+                case 9:
+                    mon += "Sep";
+                    break;
+                case 10:
+                    mon += "Oct";
+                    break;
+                case 11:
+                    mon += "Nov";
+                    break;
+                case 12:
+                    mon += "Dec";
+                    break;
+            }
+
+            document.write("<a href=\"./" + mon + ".html\">賽程</a>");
+        }
+
+        function getCalendar(firstDay) {
+            var calendar = "<tr>";
+            var date = 1;
+            var count = 0;
+
+            /* FIND THE FIRST DAY */
+            while (date == 1) {
+                if ((count == 0) && (firstDay == "SUN")) {
+                    calendar += isToday(date);
+                    calendar += date;
+                    calendar += "</p><p class=\"game\">";
+                    calendar += isGame(11, date);
+                    calendar += "</p></td>";
+                    count++;
+                    date++;
+                }
+                else if ((count == 1) && (firstDay == "MON")) {
+                    calendar += isToday(date);
+                    calendar += date;
+                    calendar += "</p><p class=\"game\">";
+                    calendar += isGame(11, date);
+                    calendar += "</p></td>";
+                    count++;
+                    date++;
+                }
+                else if ((count == 2) && (firstDay == "TUE")) {
+                    calendar += isToday(date);
+                    calendar += date;
+                    calendar += "</p><p class=\"game\">";
+                    calendar += isGame(11, date);
+                    calendar += "</p></td>";
+                    count++;
+                    date++;
+                }
+                else if ((count == 3) && (firstDay == "WED")) {
+                    calendar += isToday(date);
+                    calendar += date;
+                    calendar += "</p><p class=\"game\">";
+                    calendar += isGame(11, date);
+                    calendar += "</p></td>";
+                    count++;
+                    date++;
+                }
+                else if ((count == 4) && (firstDay == "THUR")) {
+                    calendar += isToday(date);
+                    calendar += date;
+                    calendar += "</p><p class=\"game\">";
+                    calendar += isGame(11, date);
+                    calendar += "</p></td>";
+                    count++;
+                    date++;
+                }
+                else if ((count == 5) && (firstDay == "FRI")) {
+                    calendar += isToday(date);
+                    calendar += date;
+                    calendar += "</p><p class=\"game\">";
+                    calendar += isGame(11, date);
+                    calendar += "</p></td>";
+                    count++;
+                    date++;
+                }
+                else if ((count == 6) && (firstDay == "SAT")) {
+                    calendar += isToday(date);
+                    calendar += date;
+                    calendar += "</p><p class=\"game\">";
+                    calendar += isGame(11, date);
+                    calendar += "</p></td>";
+                    count++;
+                    date++;
+                }
+                else {
+                    calendar += "<td><p class=\"dd\"></p><p class=\"game\"></p></td>";
+                    count++;
+                }
+            }
+
+            /* COMPLETE THE FIRST WEEK */
+            for (; count < 7; count++ , date++) {
+                calendar += isToday(date);
+                calendar += date;
+                calendar += "</p><p class=\"game\">";
+                calendar += isGame(11, date);
+                calendar += "</p></td>";
+            }
+
+            calendar += "</tr>";
+
+            /* COMPLETE THE REMAIN DAYS */
+            while (date <= 30) {
+                calendar += "<tr>";
+
+                for (count = 0; count < 7; count++ , date++) {
+                    calendar += isToday(date);
+
+                    if (date <= 30) {
+                        calendar += date;
+                    }
+
+                    calendar += "</p><p class=\"game\">";
+                    calendar += isGame(11, date);
+                    calendar += "</p></td>";
+                }
+
+                calendar += "</tr>";
+            }
+
+            document.write(calendar);
+        }
+
+        function isGame(month, day) {
+            var schedule = new Array(30);
+
+            for (i = 0; i < 30; i++) {
+                schedule[i] = new Array(4);
+            }
+
+            /* INPUT THE SCHEDULE */
+
+            for (i = 0; i < 30; i++) {
+                if ((month == schedule[i][0]) && (day == schedule[i][1])) {
+                    var s = "";
+                    s += schedule[i][2];
+                    s += "<br>vs.<br>";
+                    s += schedule[i][3];
+                    return s;
+                }
+            }
+
+            return "";
+        }
+
+        function isToday(date) {
+            var today = new Date();
+
+            if ((today.getMonth() + 1 == 11) && (today.getDate() == date)) {
+                return "<td class=\"today\"><p class=\"dd\">";
+            }
+            else {
+                return "<td><p class=\"dd\">";
+            }
+        }
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="../css/base.css" rel="stylesheet" media="all">
+    <link href="../css/schedule.css" rel="stylesheet" media="all">
+
+    <!--[if It IE]>
+        <script src="/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index">
+    <header id="header">
+        <div class="inner">
+            <h1 id="logo">
+                <a href="../index.html">
+                    <img src="../img/logo.jpg" width="164" height="53" alt="NCBA">
+                </a>
+            </h1>
+
+            <p id="title">政大棒球聯盟 NCBA</p>
+        </div>
+    </header>
+
+    <nav id="gnav">
+        <ul class="inner">
+            <li>
+                <a href="../gnav/org.html">聯盟組織</a>
+            </li>
+            <li>
+                <a href="../gnav/news.html">最新消息</a>
+            </li>
+            <li class="selected">
+                <script language="JavaScript">
+                    month();
+                </script>
+            </li>
+            <li>
+                <a href="../gnav/standing.html">戰績數據</a>
+            </li>
+            <li>
+                <a href="../gnav/top5.html">排行榜</a>
+            </li>
+            <li>
+                <a href="../gnav/teams.html">球隊</a>
+            </li>
+            <li>
+                <a href="../gnav/photo.html">比賽相簿</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="contents" class="inner">
+        <main id="main">
+            <fieldset class="field">
+                <legend class="fieldset_title">賽程</legend>
+
+                <p class="month">November 2018</p>
+
+                <table class="day">
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+
+                    <script language="JavaScript">
+                        getCalendar("THUR");
+                    </script>
+                </table>
+            </fieldset>
+        </main>
+
+        <div id="manu" class="side">
+            <ul>
+                <p>2018</p>
+                <li>
+                    <a href="./Aug.html">八　　　月</a>
+                </li>
+                <li>
+                    <a href="./Sep.html">九　　　月</a>
+                </li>
+                <li>
+                    <a href="./Oct.html">十　　　月</a>
+                </li>
+                <li>
+                    <a href="./Nov.html">十　一　月</a>
+                </li>
+                <li>
+                    <a href="./Dec.html">十　二　月</a>
+                </li>
+
+                <p>2019</p>
+                <li>
+                    <a href="./Jan.html">一　　　月</a>
+                </li>
+                <li>
+                    <a href="./Feb.html">二　　　月</a>
+                </li>
+                <li>
+                    <a href="./Mar.html">三　　　月</a>
+                </li>
+                <li>
+                    <a href="./Apr.html">四　　　月</a>
+                </li>
+                <li>
+                    <a href="./May.html">五　　　月</a>
+                </li>
+                <li>
+                    <a href="./Jun.html">六　　　月</a>
+                </li>
+                <li>
+                    <a href="./Jul.html">七　　　月</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--p id="page_top"><a href="#header">回到頁面上方</a></p-->
+    </div>
+
+    <footer id="footer">
+        <div class="inner">
+            <ul class="sns">
+                <li>
+                    <a href="https://www.facebook.com/NCCUNCBA" class="icon-facebook2" title="Facebook"></a>
+                </li>
+                <li>
+                    <a href="#" class="icon-instagram" title="Instagram"></a>
+                </li>
+                <li>
+                    <a href="mailto:nccuncba@gmail.com" class="icon-envelope" title="Email"></a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                <small>Copyright &copy; NCBA All Right Reserved.</small>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

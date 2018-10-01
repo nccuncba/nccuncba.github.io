@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+.side{
+    width: 100%;
+    margin-top: 10px;
+    border: dashed 1px;
+    text-align: center;
+}
+.side li{
+    font-size: 12px;
+    padding: 5px 0;
+}
+@media screen and (min-width: 640px){
+    .side{
+        margin-top: 0;
+        padding: 10px;
+        text-align: left;
+    }
+    .side li{
+        margin-left: 15px;
+    }
+}
+
+.album{
+    width: 100%;
+}
+.album td{
+    width: 20%;
+    height: 65px;
+    padding: 2px 2.5%;
+    text-align: center;
+}
+.album img{
+    max-height: 65px;
+}
+@media screen and (min-width: 640px){
+    .album td{
+        height: 150px;
+        padding: 5px 2.5%;
+    }
+    .album img{
+        max-height: 150px;
+    }
+}
+
+.rotate_l{
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.rotate_r{
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#picture{
+    width: 100%;
+    min-height: 240px;
+    text-align: center;
+}
+#picture .pic{
+    max-height: 240px;
+}
+@media screen and (min-width: 640px){
+    #picture{
+        min-height: 500px;
+    }
+    #picture .pic{
+        max-height: 500px;
+    }
+}
+
+#button{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+}
+#button a{
+    text-decoration: underline;
+}
+#button li{
+    display: inline;
+}
+
+#page{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    text-align: center;
+}
+#page a{
+    text-decoration: underline;
+}
+#page li{
+    display: inline;
+}

@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+.side{
+    margin-bottom: 50px;
+}
+
+.preview{
+    padding-right: 10px;
+    text-align: center;
+}
+@media screen and (min-width: 640px){
+    .preview{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 639px){
+    .preview{
+        font-size: 18px;
+    }
+}
+
+.new{
+    width: 100%;
+}
+.news section:nth-child(2){
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.news li{
+    padding:  0 10px;
+    margin-top: 5px;
+}
+
+.heading_2{
+    padding: 0 10px;
+    border-bottom: #bdf7dc solid 0.5px;
+    color: black;
+    font-size: 18px;
+}
+
+.intro{
+    padding: 0 10px;
+    color: black;
+    font-size: 13px;
+}
+.intro a{
+    text-decoration: underline;
+}
+
+.top5{
+    width: 100%;
+}
+.top5 section:nth-child(2){
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.player{
+    width: 100%;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 50px;
+    border: 1px;
+}
+.player th,
+.player td{
+    width: 20%;
+    text-align: center;
+}
+.player tr:nth-child(3) td,
+.player tr:nth-child(4) td,
+.player tr:nth-child(5) td{
+    padding: 1px 0;
+}
+.player tr:nth-child(2){
+    height: auto;
+    min-height: 100px;
+}
+.player tr:nth-child(1) th{
+    padding: 10px 0;
+}
+.player img{
+    width: auto;
+    height: 100%;
+    max-height: 50px;
+}
+@media screen and (min-width: 350px){
+    .player img{
+        max-height: 80px;
+    }
+}
+@media screen and (min-width: 775px){
+    .player img{
+        max-height: 148px;
+    }
+}
+
+.ranking tr{
+    width: 100%;
+}
+.ranking tr:nth-child(2n-1){
+    background-color: rgb(226, 226, 226);
+}
+.ranking tr:nth-child(2n){
+    background-color: rgb(236, 236, 236);
+}
+.ranking th{
+    font-size: 12px;
+    background-color: rgb(137, 243, 208);
+}
+.ranking td{
+    padding: 3px 0;
+}
+@media screen and (min-width: 640px){
+    .ranking th{
+        font-size: 9px;
+    }
+    .ranking td{
+        font-size: 10px;
+    }
+}
+
+.ranking{
+    width: 90%;
+    margin: 5%;
+    text-align: center;
+}
+@media screen and (min-width: 640px){
+    .ranking{
+        width: 95%;
+        margin-left: 5%;
+    }
+}
+.ranking th:not(:first-child),
+.ranking td:not(:first-child){
+    width: 15%;
+}
+.ranking th:first-child,
+.ranking td:first-child{
+    width: 40%;
+}
+
+.side ul{
+    width: 90%;
+    margin: 5%;
+    overflow: hidden;
+}
+@media screen and (min-width:640px){
+    .side ul{
+        width: 95%;
+        margin-left: 5%;
+    }
+}
+.side li{
+    width: 33.33%;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgb(137, 243, 208);
+    float: left;
+}
+.side a{
+    display: block;
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>政大棒球聯盟 NCBA</title>
+
+    <script language="JavaScript">
+        function month() {
+            var today = new Date();
+            var mon = "";
+
+            switch (today.getMonth() + 1) {
+                case 1:
+                    mon += "Jan";
+                    break;
+                case 2:
+                    mon += "Feb";
+                    break;
+                case 3:
+                    mon += "Mar";
+                    break;
+                case 4:
+                    mon += "Apr";
+                    break;
+                case 5:
+                    mon += "May";
+                    break;
+                case 6:
+                    mon += "Jun";
+                    break;
+                case 7:
+                    mon += "Jul";
+                    break;
+                case 8:
+                    mon += "Aug";
+                    break;
+                case 9:
+                    mon += "Sep";
+                    break;
+                case 10:
+                    mon += "Oct";
+                    break;
+                case 11:
+                    mon += "Nov";
+                    break;
+                case 12:
+                    mon += "Dec";
+                    break;
+            }
+
+            document.write("<a href=\"./schedule/" + mon + ".html\">賽程</a>");
+        }
+
+        function display(A, B, C) {
+            if (A) {
+                get_A();
+            }
+            else if (B) {
+                get_B();
+            }
+            else if (C) {
+                get_C();
+            }
+        }
+
+        function get_A() {
+            var s = "";
+
+            s += "<table class=\"ranking\">"
+            s += "<tr> <th></th> <th>W</th> <th>L</th> <th>T</th> <th>GB</th> </tr>";
+            s += "<tr> <td>會計社會</td> <td>0</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "<tr> <td>財政</td> <td>0</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "<tr> <td>外交</td> <td>0</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "<tr> <td>資科心理</td> <td>0</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "<tr> <td>經濟政治</td> <td>0</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "</table>";
+
+            document.getElementById("rank").innerHTML = s;
+        }
+
+        function get_B() {
+            var s = "";
+
+            s += "<table class=\"ranking\">"
+            s += "<tr> <th></th> <th>W</th> <th>L</th> <th>T</th> <th>GB</th> </tr>";
+            s += "<tr> <td>統計</td> <td>0</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "<tr> <td>地政</td> <td>0</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "<tr> <td>歷史</td> <td>0</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "<tr> <td>國貿資管</td> <td>0</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "<tr> <td>法律</td> <td>0</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "</table>";
+
+            document.getElementById("rank").innerHTML = s;
+        }
+
+        function get_C() {
+            var s = "";
+
+            s += "<table class=\"ranking\">"
+            s += "<tr> <th></th> <th>W</th> <th>L</th> <th>T</th> <th>GB</th> </tr>";
+            s += "<tr> <td>傳院</td> <td>1</td> <td>0</td> <td>0</td> <td>--</td> </tr>";
+            s += "<tr> <td>財管</td> <td>0</td> <td>0</td> <td>0</td> <td>0.5</td> </tr>";
+            s += "<tr> <td>金融企管</td> <td>0</td> <td>0</td> <td>0</td> <td>0.5</td> </tr>";
+            s += "<tr> <td>風管</td> <td>0</td> <td>1</td> <td>0</td> <td>1.0</td> </tr>";
+            s += "</table>";
+
+            document.getElementById("rank").innerHTML = s;
+        }
+    </script>
+
+    <meta name="Keywords" content="政大, 政大棒球, 棒球, 政大棒球聯盟, NCCU, NCCUNCBA, NCBA">
+    <meta name="Description" content="政大棒球聯盟希望能提供政大各系所棒球隊一個良好的比賽平台，並藉由舉辦聯盟賽季與相關活動，營造政大校園的棒球風氣！">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="./css/base.css" rel="stylesheet" media="all">
+    <link href="./css/index.css" rel="stylesheet" media="all">
+
+    <!--[if It IE]>
+        <script src="/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index">
+    <header id="header">
+        <div class="inner">
+            <p id="logo">
+                <a href="./index.html">
+                    <img src="./img/logo.jpg" alt="NCBA">
+                </a>
+            </p>
+
+            <h1 id="title">政大棒球聯盟 NCBA</h1>
+        </div>
+    </header>
+
+    <nav id="gnav">
+        <ul class="inner">
+            <li>
+                <a href="./gnav/org.html">聯盟組織</a>
+            </li>
+            <li>
+                <a href="./gnav/news.html">最新消息</a>
+            </li>
+            <li>
+                <script language="JavaScript">
+                    month();
+                </script>
+            </li>
+            <li>
+                <a href="./gnav/standing.html">戰績數據</a>
+            </li>
+            <li>
+                <a href="./gnav/top5.html">排行榜</a>
+            </li>
+            <li>
+                <a href="./gnav/teams.html">球隊</a>
+            </li>
+            <li>
+                <a href="./gnav/photo.html">比賽相簿</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="contents" class="inner">
+        <div id="manu">
+            <section class="side">
+                <h2 class="heading">賽事預告</h2>
+
+                <p class="preview"><a href="./box/20181002_LineUp.html">法律 vs. 國貿資管</a></p>
+            </section>
+
+            <section class="side">
+                <h2 class="heading">戰績</h2>
+
+                <p>
+                    <ul>
+                        <li><a href="javascript:display(true, false, false);">A</a></li>
+                        <li><a href="javascript:display(false, true, false);">B</a></li>
+                        <li><a href="javascript:display(false, false, true);">C</a></li>
+                    </ul>
+
+                    <div id="rank"></div>
+                </p>
+            </section>
+        </div>
+
+        <main id="main">
+            <section class="news">
+                <section>
+                    <h2 class="heading">今日最新</h2>
+
+                    <img src="./img/news/2018.10.01.jpg"" width=" 100%">
+                    <h3 class="heading_2">風管0：11傳院</h3>
+                    <p class="intro">政大棒球聯盟的第一場比賽在大晴天正式開打了，讓我們來回顧這一場具有特殊意義的比賽吧....
+                        （
+                        <a href="./news/20181001001.html">繼續閱讀</a>）</p>
+                </section>
+
+                <section>
+                    <h2 class="heading">消息回顧</h2>
+
+                    <ul>
+                        <li>
+                            <a href="./news/20180831001.html">聯盟小故事16：最後，我們的期望---政大棒球聯盟</a>
+                        </li>
+                        <li>
+                            <a href="./news/20180828001.html">聯盟小教室15：台灣甲子園—黑豹旗賽事</a>
+                        </li>
+                        <li>
+                            <a href="./news/20180826001.html">聯盟小教室14：13年棒球經典賽的感動，你還記得嗎？</a>
+                        </li>
+                    </ul>
+
+                    <p class="more">
+                        （<a href="./gnav/news.html">查看更多</a>）</p>
+                </section>
+            </section>
+
+            <section class="top5">
+                <section>
+                    <h2 class="heading">防禦率TOP5</h2>
+
+                    <table class="player">
+                        <tr>
+                            <th>第一名</th>
+                            <th>第二名</th>
+                            <th>第三名</th>
+                            <th>第四名</th>
+                            <th>第五名</th>
+                        </tr>
+                        <tr>
+                            <!--PHOTO-->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <!--TEAM-->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <!--NAME-->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <!--DATA-->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
+                    <h2 class="heading">打擊率TOP5</h2>
+
+                    <table class="player">
+                        <tr>
+                            <th>第一名</th>
+                            <th>第二名</th>
+                            <th>第三名</th>
+                            <th>第四名</th>
+                            <th>第五名</th>
+                        </tr>
+                        <tr>
+                            <!--PHOTO-->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <!--TEAM-->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <!--NAME-->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <!--DATA-->
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+        </main>
+
+        <!--p id="page_top"><a href="#header">回到頁面上方</a></p-->
+    </div>
+
+    <footer id="footer">
+        <div class="inner">
+            <ul class="sns">
+                <li>
+                    <a href="https://www.facebook.com/NCCUNCBA" class="icon-facebook2" title="Facebook"></a>
+                </li>
+                <li>
+                    <a href="#" class="icon-instagram" title="Instagram"></a>
+                </li>
+                <li>
+                    <a href="mailto:nccuncba@gmail.com" class="icon-envelope" title="Email"></a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                <small>Copyright &copy; NCBA All Right Reserved.</small>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

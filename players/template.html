@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>政大棒球聯盟 NCBA - 球員</title>
+
+    <script language="JavaScript">
+        function month() {
+            var today = new Date();
+            var mon = "";
+
+            switch (today.getMonth() + 1) {
+                case 1:
+                    mon += "Jan";
+                    break;
+                case 2:
+                    mon += "Feb";
+                    break;
+                case 3:
+                    mon += "Mar";
+                    break;
+                case 4:
+                    mon += "Apr";
+                    break;
+                case 5:
+                    mon += "May";
+                    break;
+                case 6:
+                    mon += "Jun";
+                    break;
+                case 7:
+                    mon += "Jul";
+                    break;
+                case 8:
+                    mon += "Aug";
+                    break;
+                case 9:
+                    mon += "Sep";
+                    break;
+                case 10:
+                    mon += "Oct";
+                    break;
+                case 11:
+                    mon += "Nov";
+                    break;
+                case 12:
+                    mon += "Dec";
+                    break;
+            }
+
+            document.write("<a href=\"../schedule/" + mon + ".html\">賽程</a>");
+        }
+
+        function batter(YEAR, AB, H, TWO_BH, HR, R, RBI, SO, BB, HBP, SH, SF, SB, TB/*, OBP, SLG, AVG*/) {
+            var OBP, SLG, AVG;
+
+            if ((AB + BB + HBP + SF) == 0) {
+                OBP = "--";
+            }
+            else {
+                OBP = trans((H + BB + HBP) / (AB + BB + HBP + SF));
+            }
+
+            if (AB == 0) {
+                SLG = "--";
+                AVG = "--";
+            }
+            else {
+                SLG = trans(TB / AB);
+                AVG = trans(H / AB);
+            }
+
+            document.write("<tr>");
+            document.write("<th>YEAR</th>");
+            document.write("<th>AB</th>");
+            document.write("<th>H</th>");
+            document.write("<th>2BH</th>");
+            document.write("<th>HR</th>");
+            document.write("<th>R</th>");
+            document.write("<th>RBI</th>");
+            document.write("<th>SO</th>");
+            document.write("<th>BB</th>");
+            document.write("<th>HBP</th>");
+            document.write("<th>SH</th>");
+            document.write("<th>SF</th>");
+            document.write("<th>SB</th>");
+            document.write("<th>TB</th>");
+            document.write("<th>OBP</th>");
+            document.write("<th>SLG</th>");
+            document.write("<th>AVG</th>");
+            document.write("</tr><tr>");
+            document.write("<td>" + YEAR + "</td>");
+            document.write("<td>" + AB + "</td>");
+            document.write("<td>" + H + "</td>");
+            document.write("<td>" + TWO_BH + "</td>");
+            document.write("<td>" + HR + "</td>");
+            document.write("<td>" + R + "</td>");
+            document.write("<td>" + RBI + "</td>");
+            document.write("<td>" + SO + "</td>");
+            document.write("<td>" + BB + "</td>");
+            document.write("<td>" + HBP + "</td>");
+            document.write("<td>" + SH + "</td>");
+            document.write("<td>" + SF + "</td>");
+            document.write("<td>" + SB + "</td>");
+            document.write("<td>" + TB + "</td>");
+            document.write("<td>" + OBP + "</td>");
+            document.write("<td>" + SLG + "</td>");
+            document.write("<td>" + AVG + "</td>");
+            document.write("</tr>")
+        }
+
+        function pitcher(YEAR, IN, BF, NP, H, HR, SO, BB, HBP, WP, BK, R, ER) {
+            var WHIP, ERA;
+
+            if (IN == 0) {
+                WHIP = "--";
+                ERA = "--";
+            }
+            else{
+                var INNING = Number(IN.toFixed(0));
+                INNING += Number(((IN * 10) % 10) / 3);
+                WHIP = (H + BB) / INNING;
+                ERA  = (ER * 9) / INNING;
+                WHIP = WHIP.toFixed(2);
+                ERA = ERA.toFixed(2);
+            }
+
+            document.write("<tr>");
+            document.write("<th>YEAR</th>");
+            document.write("<th>IN</th>");
+            document.write("<th>BF</th>");
+            document.write("<th>NP</th>");
+            document.write("<th>H</th>");
+            document.write("<th>HR</th>");
+            document.write("<th>SO</th>");
+            document.write("<th>BB</th>");
+            document.write("<th>HBP</th>");
+            document.write("<th>WP</th>");
+            document.write("<th>BK</th>");
+            document.write("<th>R</th>");
+            document.write("<th>ER</th>");
+            document.write("<th>WHIP</th>");
+            document.write("<th>ERA</th>");
+            document.write("</tr><tr>");
+            document.write("<td>" + YEAR + "</td>");
+            document.write("<td>" + IN + "</td>");
+            document.write("<td>" + BF + "</td>");
+            document.write("<td>" + NP + "</td>");
+            document.write("<td>" + H + "</td>");
+            document.write("<td>" + HR + "</td>");
+            document.write("<td>" + SO + "</td>");
+            document.write("<td>" + BB + "</td>");
+            document.write("<td>" + HBP + "</td>");
+            document.write("<td>" + WP + "</td>");
+            document.write("<td>" + BK + "</td>");
+            document.write("<td>" + R + "</td>");
+            document.write("<td>" + ER + "</td>");
+            document.write("<td>" + WHIP + "</td>");
+            document.write("<td>" + ERA + "</td>");
+            document.write("</tr>");
+        }
+
+        function defense(YEAR, TC, A, E, PB, CS) {
+            var FPCT;
+
+            if (TC == 0) {
+                FPCT = "--";
+            }
+            else {
+                FPCT = trans((TC - E) / TC);
+            }
+
+            document.write("<tr>");
+            document.write("<th>YEAR</th>");
+            document.write("<th>TC</th>");
+            document.write("<th>A</th>");
+            document.write("<th>E</th>");
+            document.write("<th>PB</th>");
+            document.write("<th>CS</th>");
+            document.write("<th>FPCT</th>");
+            document.write("</tr><tr>");
+            document.write("<td>" + YEAR + "</td>");
+            document.write("<td>" + TC + "</td>");
+            document.write("<td>" + A + "</td>");
+            document.write("<td>" + E + "</td>");
+            document.write("<td>" + PB + "</td>");
+            document.write("<td>" + CS + "</td>");
+            document.write("<td>" + FPCT + "</td>");
+        }
+
+        function trans(num) {
+            var temp = Number(num.toFixed(3));
+            temp = temp * 1000;
+            var s;
+            if (temp == 1000) {
+                s = "1.00";
+            }
+            else if (temp >= 100) {
+                s = "." + temp;
+            }
+            else if (temp >= 10) {
+                s = ".0" + temp;
+            }
+            else {
+                s = ".00" + temp;
+            }
+            return s;
+        }
+    </script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="../css/base.css" rel="stylesheet" media="all">
+    <link href="../css/teams.css" rel="stylesheet" media="all">
+
+    <!--[if It IE]>
+        <script src="/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index">
+    <header id="header">
+        <div class="inner">
+            <h1 id="logo">
+                <a href="../index.html">
+                    <img src="../img/logo.jpg" width="164" height="53" alt="NCBA">
+                </a>
+            </h1>
+
+            <p id="title">政大棒球聯盟 NCBA</p>
+        </div>
+    </header>
+
+    <nav id="gnav">
+        <ul class="inner">
+            <li>
+                <a href="../gnav/org.html">聯盟組織</a>
+            </li>
+            <li>
+                <a href="../gnav/news.html">最新消息</a>
+            </li>
+            <li>
+                <script language="JavaScript">
+                    month();
+                </script>
+            </li>
+            <li>
+                <a href="../gnav/standing.html">戰績數據</a>
+            </li>
+            <li>
+                <a href="../gnav/top5.html">排行榜</a>
+            </li>
+            <li class="selected">
+                <a href="../gnav/teams.html">球隊</a>
+            </li>
+            <li>
+                <a href="../gnav/photo.html">比賽相簿</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="contents" class="inner">
+        <main id="main">
+            <fieldset class="field">
+                <legend class="fieldset_title">張麒竑</legend>
+
+                <table class="profile">
+                    <tr>
+                        <!--PROPILE PHOTO-->
+                        <td></td>
+                        <!--PROFILE-->
+                        <td>
+                            <dl>
+                                <dt>球隊：</dt><dd></dd>
+                                <dt>背號：</dt><dd></dd>
+                                <dt>系級：</dt><dd></dd>
+                                <dt>身高：</dt><dd></dd>
+                                <dt>體重：</dt><dd></dd>
+                                <dt>出生日期：</dt><dd></dd>
+                            </dl>
+                        </td>
+                    </tr>
+                </table>
+
+                <h3 class="heading_2">打擊成績HITTING</h3>
+
+                <table class="batter">
+                    <script language="JavaScript">
+                        /*
+                        batter(YEAR, AB, H, 2BH, HR, R, RBI, SO, BB, HBP, SH, SF, SB, TB);
+                        */
+                        batter(2018, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                    </script>
+                </table>
+
+                <h3 class="heading_2">投球成績PITCHING</h3>
+
+                <table class="pitcher">
+                    <script language="JavaScript">
+                        /*
+                        pitcher(YEAR, IN, BF, NP, H, HR, SO, BB, HBP, WP, BK, R, ER);
+                        */
+                        pitcher(2018, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                    </script>
+                </table>
+
+                <h3 class="heading_2">守備成績DEFENSE</h3>
+
+                <table class="defense">
+                    <script language="JavaScript">
+                        /*
+                        defense(YEAR,TC, A, E,PB,CS);*/
+                        defense(2018, 0, 0, 0, 0, 0);
+                    </script>
+                </table>
+            </fieldset>
+        </main>
+
+        <div id="manu" class="side">
+            <ul>
+                <li>
+                    <a href="./ba_mb.html">企管金融</a>
+                </li>
+                <li>
+                    <a href="./cs_psy.html">資科心理</a>
+                </li>
+                <li>
+                    <a href="../teams/at_social.html">會計社會</a>
+                </li>
+                <li>
+                    <a href="../teams/land_phi.html">地政哲學</a>
+                </li>
+                <li>
+                    <a href="../teams/ecom_politics.html">經濟政治</a>
+                </li>
+                <li>
+                    <a href="../teams/ib_im.html">國貿資管</a>
+                </li>
+                <li>
+                    <a href="../teams/rmi.html">風　　管</a>
+                </li>
+                <li>
+                    <a href="../teams/comm.html">傳　　院</a>
+                </li>
+                <li>
+                    <a href="../teams/finance.html">財　　管</a>
+                </li>
+                <li>
+                    <a href="../teams/law.html">法　　律</a>
+                </li>
+                <li>
+                    <a href="../teams/diplo.html">外　　交</a>
+                </li>
+                <li>
+                    <a href="..teams/pf.html">財　　政</a>
+                </li>
+                <li>
+                    <a href="../teams/history.html">歷　　史</a>
+                </li>
+                <li>
+                    <a href="../teams/stat.html">統　　計</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--p id="page_top"><a href="#header">回到頁面上方</a></p-->
+    </div>
+
+    <footer id="footer">
+        <div class="inner">
+            <ul class="sns">
+                <li>
+                    <a href="https://www.facebook.com/NCCUNCBA" class="icon-facebook2" title="Facebook"></a>
+                </li>
+                <li>
+                    <a href="#" class="icon-instagram" title="Instagram"></a>
+                </li>
+                <li>
+                    <a href="mailto:nccuncba@gmail.com" class="icon-envelope" title="Email"></a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                <small>Copyright &copy; NCBA All Right Reserved.</small>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

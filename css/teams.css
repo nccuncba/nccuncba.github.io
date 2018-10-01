@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+.side{
+    width: 100%;
+    margin-top: 10px;
+    border: dashed 1px;
+    text-align: center;
+}
+.side li{
+    font-size: 12px;
+    padding: 5px 0;
+}
+@media screen and (min-width: 640px){
+    .side{
+        padding: 10px;
+        margin-top: 0;
+        text-align: left;
+    }
+    .side li{
+        margin-left: 15px;
+    }
+}
+
+.player{
+    width: 100%;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 50px;
+    border: 1px;
+}
+.player th,
+.player td{
+    width: 20%;
+    text-align: center;
+}
+.player tr:nth-child(3) td,
+.player tr:nth-child(4) td{
+    padding: 1px 0;
+}
+.player tr:nth-child(2){
+    height: auto;
+    min-height: 100px;
+}
+.player tr:nth-child(1) th{
+    padding: 10px 0;
+}
+.player img{
+    width: auto;
+    height: 100%;
+    max-height: 50px;
+}
+@media screen and (min-width: 350px){
+    .player img{
+        max-height: 80px;
+    }
+}
+@media screen and (min-width: 775px){
+    .player img{
+        max-height: 148px;
+    }
+}
+
+.field .profile{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.profile td:first-child{
+    width: 40%;
+    text-align: center;
+}
+.profile td:nth-child(2){
+    text-align: left;
+}
+.profile dl{
+    width: 100%;
+    overflow: hidden;
+}
+.profile dt{
+    padding: 5px;
+    font-weight: bold;
+    float: left;
+}
+.profile dd{
+    padding: 5px;
+}
+.profile img{
+    height: 180px;
+    width: auto;
+}
+@media screen and (max-width: 639px){
+    .field .profile{
+        height: 150px;
+    }
+    .profile img{
+        height: 130px;
+    }
+    .profile dt,
+    .profile dd{
+        padding: 1px;
+    }
+}
+
+.heading_2{
+    width: 100%;
+    border-bottom: orangered solid 0.5px;
+    margin-bottom: 10px;
+    color: orangered;
+    font-size: 18px;
+}
+
+.batter tr,
+.pitcher tr,
+.defense tr{
+    width: 100%;
+}
+.batter tr:nth-child(2n-1),
+.pitcher tr:nth-child(2n-1),
+.defense tr:nth-child(2n-1){
+    background-color: rgb(226, 226, 226);
+}
+.batter tr:nth-child(2n),
+.pitcher tr:nth-child(2n),
+.defense tr:nth-child(2n){
+    background-color: rgb(236, 236, 236);
+}
+.batter th,
+.pitcher th,
+.defense th{
+    font-size: 12px;
+    background-color: rgb(137, 243, 208);
+}
+.batter td,
+.pitcher td,
+.defense td{
+    padding: 5px 0;
+}
+@media screen and (max-width: 639px){
+    .batter th,
+    .pitcher th,
+    .defense th{
+        font-size: 8px;
+    }
+    .batter td,
+    .pitcher td,
+    .defense td{
+        font-size: 9px;
+    }
+}
+
+.batter{
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.batter th:not(:first-child),
+.batter td:not(:first-child){
+    width: 6%;
+}
+.batter th:first-child,
+.batter td:first-child{
+    width: 10%;
+}
+
+.pitcher{
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.pitcher th:not(:first-child),
+.pitcher td:not(:first-child){
+    width: 7%;
+}
+.pitcher th:first-child,
+.pitcher td:first-child{
+    width: 9%;
+}
+
+.defense{
+    width: 100%;
+    text-align: center;
+}
+.defense th:not(:first-child),
+.defense td:not(:first-child){
+    width: 14%;
+}
+.defense th:first-child,
+.defense td:first-child{
+    width: 16%;
+}
+
+@media screen and (max-width: 639px){
+    .batter,
+    .pitcher{
+        margin-bottom: 30px;
+    }
+}
